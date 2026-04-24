@@ -7,8 +7,7 @@ describe('homework5', () => {
         cy.get("h2")
             .contains("Kto Cię uczy?")
             .scrollIntoView()
-            .should("be.visible");
-        cy.wait(2000);
+            .should("be.visible")
         cy.screenshot("screenshot", {
             capture: "viewport",
             overwrite: true,
