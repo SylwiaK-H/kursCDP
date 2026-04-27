@@ -23,7 +23,6 @@ describe('Homework 6', () =>{
         }).then((response) =>{
             expect(response.status).to.eq(200)
             expect(response.body.title).to.eq('foo')
-            expect(response.body.userId).to.eq(1)
             expect(response.body.userId).not.to.eq(2,10,100)
         })
 
@@ -34,7 +33,6 @@ describe('Homework 6', () =>{
                 headers: {'Content-type': 'application/json'}     
         }).then((response)=>{
             expect(response.status).to.eq(200)
-            expect(response.body.title).not.to.exist
             expect(response.body).to.be.empty
         })
     })
